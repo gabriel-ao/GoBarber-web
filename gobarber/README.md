@@ -1,3 +1,7 @@
+docker-compose up
+docker-compose down
+docker-compose build --no-cache
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

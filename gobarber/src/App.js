@@ -1,5 +1,17 @@
+import React from 'react';
+import { Router } from 'react-router-dom';
+
+import './config/reactotronConfig';
+
+import Routes from './routes';
+import history from './services/history';
+
 function App() {
-  return <div> hello gabrie</div>;
+  return (
+    <Router history={history}>
+      <Routes />
+    </Router>
+  );
 }
 
 export default App;
