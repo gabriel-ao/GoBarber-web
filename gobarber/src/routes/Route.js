@@ -10,7 +10,7 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  const signed = false;
+  const signed = true;
 
   // verificando se está logado, se não retorna para login
   if(!signed && isPrivate) {

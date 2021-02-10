@@ -4,6 +4,7 @@ import Route from './Route'
 
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SingUp';
+
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 
