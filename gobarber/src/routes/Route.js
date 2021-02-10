@@ -13,37 +13,33 @@ export default function RouteWrapper({
   const signed = false;
 
   // verificando se está logado, se não retorna para login
-  if(!signed && isPrivate) {
+  if (!signed && isPrivate) {
     return <Redirect to="/" />;
   }
 
   // verificando se o usuario esta logado e é enviado para o dashboard
-  if(signed && !isPrivate) {
+  if (signed && !isPrivate) {
     return <Redirect to="/dashboard" />;
   }
 
-  const Layout = signed ? DefaultLayout : Authlayout
+  const Layout = signed ? DefaultLayout : Authlayout;
 
   return (
     <Route
       {...rest}
       render={props => (
         <Layout>
-          <Component {...props}/>
+          <Component {...props} />
         </Layout>
       )}
     />
   );
-
 }
-
 
 RouteWrapper.propTypes = {
   isPrivate: PropTypes.bool,
-  component: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.func
-  ]).isRequired
+  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+    .isRequired,
 };
 
 RouteWrapper.defaultProps = {
