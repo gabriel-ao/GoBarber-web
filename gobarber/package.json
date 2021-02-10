@@ -17,9 +17,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,8 +41,11 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-root-import": "^6.6.0",
+    "customize-cra": "^1.0.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.8",
     "sequelize-cli": "^6.2.0",
     "sucrase": "^3.17.0"
   }
