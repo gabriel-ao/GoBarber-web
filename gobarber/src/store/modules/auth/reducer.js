@@ -7,7 +7,6 @@ const INITIAL_STATE = {
 };
 
 export default function auth(state = INITIAL_STATE, action) {
-  console.tron.log('action.type ==>>', action.type);
   return produce(state, draft => {
     switch (action.type) {
       case '@auth/SIGN_IN_REQUEST': {
@@ -28,9 +27,6 @@ export default function auth(state = INITIAL_STATE, action) {
       }
 
       default:
-        if (!action.type.includes('@redux')) {
-          throw new Error('unknow redux action');
-        }
     }
   });
 }
