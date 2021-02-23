@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '~/assets/images/logo-interna.svg';
+import Notifications from '~/components/Notifications';
 
+import logo from '~/assets/images/logo-interna.svg';
 import adorable from '~/assets/images/AA_icon.png';
 
 import { Container, Content, Profile } from './styles';
@@ -17,6 +18,8 @@ function Header() {
         </nav>
 
         <aside>
+          <Notifications />
+
           <Profile>
             <div>
               <strong> Gabriel de Oliveira</strong>
